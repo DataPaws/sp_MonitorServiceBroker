@@ -179,7 +179,7 @@ BEGIN TRY
 
         IF @DefaultAlerting = 1
         BEGIN
-            SET @ErrorMessage =N'Databases with Service Broker disabled: ' + @Databases;
+            SET @ErrorMessage = N'Databases with Service Broker disabled: ' + @Databases;
             RAISERROR (@ErrorMessage, 16, 1) WITH LOG;
         END
 
