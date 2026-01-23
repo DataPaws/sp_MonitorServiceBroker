@@ -4,7 +4,7 @@ It’s designed to detect and alert on if Service Broker is disabled, log the re
 
 # What does sp_MonitorServiceBroker do?
   • Review the Service Broker status of your SQL Server databases quickly and easily <br>
-  • Automatically log database status to a configurable table for historical tracking <br>
+  • Automatically log database status to a configurable table for historical tracking (90 day default retention) <br>
   • Generate alerts when databases have Service Broker disabled <br>
   • Optionally attempt to re-enable Service Broker if it's disabled <br>
 
