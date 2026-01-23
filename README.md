@@ -13,6 +13,7 @@ If ``` @DefaultAlerting = 1 ```, the procedure will raise an error containing th
 
 # Example Usage
 The tool is designed to run as part of a scheduled SQL Agent Job that runs on a reoccurring basis, typically every 5 - 15 minutes.
+```@Databases``` Excepts a comma separated list of databases that already have Service Broker enabled.
   • Basic Monitoring
 ```
 EXEC dbo.sp_MonitorServiceBroker
