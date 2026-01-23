@@ -12,8 +12,8 @@ It’s designed to detect and alert on if Service Broker is disabled, log the re
 If ``` @DefaultAlerting = 1 ```, the procedure will raise an error containing the database(s) that have Service Broker disabled. This allows SQL Server Agent or monitoring tools to capture the alert automatically.
 
 # Example Usage
-The tool is designed to run as part of a scheduled SQL Agent Job that runs on a reoccurring basis, typically every 5 - 15 minutes.
-```@Databases``` Excepts a comma separated list of databases that already have Service Broker enabled.
+The tool is designed to run as part of a scheduled SQL Agent Job that runs on a reoccurring basis, typically every 5 - 15 minutes. <br>
+```@Databases``` Expects a comma separated list of databases that already have Service Broker enabled.
   • Basic Monitoring
 ```
 EXEC dbo.sp_MonitorServiceBroker
