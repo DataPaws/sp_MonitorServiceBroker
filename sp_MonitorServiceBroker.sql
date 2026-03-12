@@ -12,7 +12,7 @@ AS
 BEGIN
 /*
 sp_MonitorServiceBroker by DataPaws
-Version: 01/22/2026 18:03
+Version: v1.0.0 - 01/22/2026 18:03
 Documentation: https://datapawsconsulting.com/sp_MonitorServiceBroker
 GitHub: https://github.com/DataPaws/sp_MonitorServiceBroker
 
