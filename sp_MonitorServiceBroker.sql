@@ -21,8 +21,8 @@ Description:
     and attempt to automatically resolve issues.
 
 Parameters:
-    @Databases						Specify the list of databases to target, default is all query store enabled databases - Example: @Databases = 'Database1, Database2, Database3'
-    @LoggingTable					NULL = Disabled, Specify a table to enable logging of actions and query store failures - Table can be specified in one, two, or three-part format
+    @Databases						Specify the list of databases to target, default is all service broker enabled databases - Example: @Databases = 'Database1, Database2, Database3'
+    @LoggingTable					NULL = Disabled, Specify a table to enable logging of actions and service broker failures - Table can be specified in one, two, or three-part format
     @EnableBroker			        0 = Disabled, 1 = Attempts to automatically re-enable service broker
     @DefaultAlerting				0 = Disabled, 1 = Uses built-in SQL Alerts on Severity 16 that write to the error log to notify for failures
     @Retention				        Number of days to retain data in the Logging Table
