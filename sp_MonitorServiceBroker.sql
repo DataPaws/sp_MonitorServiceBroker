@@ -12,8 +12,8 @@ AS
 BEGIN
 /*
 sp_MonitorServiceBroker by DataPaws
-Version: v1.0.0 - 01/22/2026 18:03
-Documentation: https://datapawsconsulting.com/sp_MonitorServiceBroker
+Version: v1.0.1 - 05/20/2026
+Documentation: https://datapawsconsulting.com/resources/sp_MonitorServiceBroker
 GitHub: https://github.com/DataPaws/sp_MonitorServiceBroker
 
 Description:
