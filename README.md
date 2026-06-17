@@ -17,25 +17,26 @@ If ``` @DefaultAlerting = 1 ```, the procedure will raise an error containing th
 # Example Usage
 The tool is designed to run as part of a scheduled SQL Agent Job that runs on a reoccurring basis, typically every 5 - 15 minutes. <br>
 ```@Databases``` Expects a comma separated list of databases that already have Service Broker enabled.
-- Basic Monitoring
+
+Basic Monitoring
 ```
 EXEC dbo.sp_MonitorServiceBroker
     @Databases = 'Database1, Database2';
 ```
-- Enable Broker Automatically
+Enable Broker Automatically
 ```
 EXEC dbo.sp_MonitorServiceBroker
     @Databases = 'Database1, Database2',
     @EnableBroker = 1;
 ```
-- Logging Enabled with 90-Day Retention
+Logging Enabled with 90-Day Retention
 ```
 EXEC dbo.sp_MonitorServiceBroker
     @Databases = 'Database1, Database2',
     @LoggingTable = 'dbo.MonitorServiceBroker',
     @Retention = 90;
 ```
-- Debug Mode
+Debug Mode
 ```
 EXEC dbo.sp_MonitorServiceBroker
     @Databases = 'Database1, Database2',
