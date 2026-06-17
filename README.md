@@ -3,13 +3,13 @@ This is a free tool from **[DataPaws](https://datapawsconsulting.com)** for SQL 
 It’s designed to detect and alert on if Service Broker is disabled, log the results, and optionally attempt to automatically re-enable it.
 
 # Requirements
-  • SQL Server 2016+
+- SQL Server 2016+
 
 # What does sp_MonitorServiceBroker do?
-  • Review the Service Broker status of your SQL Server databases quickly and easily <br>
-  • Automatically log database status to a configurable table for historical tracking (90 day default retention) <br>
-  • Generate alerts when databases have Service Broker disabled <br>
-  • Optionally attempt to re-enable Service Broker if it's disabled <br>
+- Review the Service Broker status of your SQL Server databases quickly and easily <br>
+- Automatically log database status to a configurable table for historical tracking (90 day default retention) <br>
+- Generate alerts when databases have Service Broker disabled <br>
+- Optionally attempt to re-enable Service Broker if it's disabled <br>
 
 # Alerting
 If ``` @DefaultAlerting = 1 ```, the procedure will raise an error containing the database(s) that have Service Broker disabled. This allows SQL Server Agent or monitoring tools to capture the alert automatically.
@@ -17,25 +17,25 @@ If ``` @DefaultAlerting = 1 ```, the procedure will raise an error containing th
 # Example Usage
 The tool is designed to run as part of a scheduled SQL Agent Job that runs on a reoccurring basis, typically every 5 - 15 minutes. <br>
 ```@Databases``` Expects a comma separated list of databases that already have Service Broker enabled.
-  • Basic Monitoring
+- Basic Monitoring
 ```
 EXEC dbo.sp_MonitorServiceBroker
     @Databases = 'Database1, Database2';
 ```
-  • Enable Broker Automatically
+- Enable Broker Automatically
 ```
 EXEC dbo.sp_MonitorServiceBroker
     @Databases = 'Database1, Database2',
     @EnableBroker = 1;
 ```
-  • Logging Enabled with 90-Day Retention
+- Logging Enabled with 90-Day Retention
 ```
 EXEC dbo.sp_MonitorServiceBroker
     @Databases = 'Database1, Database2',
     @LoggingTable = 'dbo.MonitorServiceBroker',
     @Retention = 90;
 ```
-  • Debug Mode
+- Debug Mode
 ```
 EXEC dbo.sp_MonitorServiceBroker
     @Databases = 'Database1, Database2',
