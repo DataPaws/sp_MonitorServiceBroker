@@ -12,7 +12,7 @@ AS
 BEGIN
 /*
 sp_MonitorServiceBroker by DataPaws
-Version: v1.0.1 - 05/20/2026
+Version: v1.0.2 - 06/22/2026
 Documentation: https://datapawsconsulting.com/resources/sp_MonitorServiceBroker
 GitHub: https://github.com/DataPaws/sp_MonitorServiceBroker
 
@@ -187,13 +187,18 @@ BEGIN TRY
 END TRY
 BEGIN CATCH
 
-		SELECT  ERROR_NUMBER() AS ErrorNumber,
-			    ERROR_SEVERITY() AS ErrorSeverity,
-			    ERROR_STATE() AS ErrorState,
-			    ERROR_PROCEDURE() AS ErrorProcedure,
-			    ERROR_LINE() AS ErrorLine,
-			    ERROR_MESSAGE() AS ErrorMessage;
-		THROW;
+    IF @SQL IS NOT NULL
+    BEGIN
+        RAISERROR('Dynamic SQL: ', 10, 1) WITH NOWAIT;
+        RAISERROR('%s', 10, 1, @sql) WITH NOWAIT;
+    END;
+
+    IF @@TRANCOUNT > 0
+    BEGIN
+        ROLLBACK;
+    END;
+
+    THROW;
 
 END CATCH
 END;
