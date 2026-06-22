@@ -17,8 +17,8 @@ Documentation: https://datapawsconsulting.com/resources/sp_MonitorServiceBroker
 GitHub: https://github.com/DataPaws/sp_MonitorServiceBroker
 
 Description:
-    This procedure monitors the status of service broker and will alert when service broker is disabled,
-    and attempt to automatically resolve issues.
+    This procedure monitors the status of service broker enabled databases and alerts when service broker is disabled,
+    and optionally attempt to re-enable it.
 
 Parameters:
     @Databases						Specify the list of databases to target, default is all service broker enabled databases - Example: @Databases = 'Database1, Database2, Database3'
