@@ -3,7 +3,7 @@ This is a free tool from **[DataPaws](https://datapawsconsulting.com)** for SQL 
 It’s designed to detect and alert on if Service Broker is disabled, log the results, and optionally attempt to automatically re-enable it.
 
 # Requirements
-- SQL Server 2016+
+- SQL Server 2017+
 
 # What does sp_MonitorServiceBroker do?
 - Monitors the status of Service Broker in SQL Server databases
